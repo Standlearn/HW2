@@ -2,8 +2,30 @@
 from math import sqrt, pi, exp
 from NumericalMethods import GPDF, Simpson, Probability
 #endregion
+from NumericalMethods import GaussSeidel
 
 #region function definitions
+
+def main():
+    # Define the augmented matrix [A | b]
+    Aaug = [
+        [3, 1, -1, 2],
+        [2, 4, 1, 12],
+        [-1, 2, 5, 10]
+    ]
+
+    # Initial guess vector
+    x = [0, 0, 0]
+
+    # Number of iterations
+    Niter = 15
+
+    # Call the GaussSeidel function
+    solution = GaussSeidel(Aaug, x, Niter)
+
+    # Print the solution
+    print("Solution vector (x):", solution)
+
 def main():
     """
     I want to integrate the Gaussian probability density function between
