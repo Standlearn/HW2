@@ -18,7 +18,7 @@ def main():
     x = [0, 0, 0]
 
     # Number of iterations
-    Niter = 15
+    Niter = 20
 
     # Call the GaussSeidel function
     solution = GaussSeidel(Aaug, x, Niter)
